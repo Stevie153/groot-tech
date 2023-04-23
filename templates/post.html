@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<main>
+{% block content %}
+<div class="main">
+
+    <div class="container">
+
+        
+
+
+        <div class="blog">
+
+            <button class="blog-topic text-tiny">Database</button>
+
+                        <h3><a href="" class="h3"> {{ posts.title }}</h3>
+                            
+                        <div class="wrapper-flex">
+
+                            <div class="profile-wrapper">
+                                <img src="{% static 'images/favicon.ico' %}" alt="Groot-Tech" width="50">
+                            </div>
+
+                            <div class="wrapper">
+                                <a href="#" class="h4">Groot-Tech</a>
+
+                                <p class="text-sm">
+                                    <time datetime="2021-09-21">{{ posts.created_on}}</time>
+                                    
+                                </p>
+                            </div>
+
+                        </div>
+            
+            <div class="blog-card-group">
+                
+                <div class="blog-card">
+                       
+                    <!-- <div class="blog-card-banner">
+                        <img src=" {{ post.image }} "
+                            alt="How to connect a React frontend with a NodeJS/Express backend" width="250"
+                            class="blog-banner-img">
+                    </div> -->
+
+                    <div class="blog-content-wrapper">
+
+                        
+
+                        <p class="blog-text">
+                            {{posts.body|safe }}
+                        </p>
+
+
+                    </div>
+
+
+                </div>
+                
+                
+            </div>
+            
+        </div>
+   {% block sidebar %} {% include 'sidebar.html' %} {% endblock sidebar %} </div>
+    
+</div>
+
+
+{% endblock content %}
+
+</main>
+<!-- {% block footer %} {% include 'footer.html' %} {% endblock footer %} -->
+
+
+
+
+<!--{% block scripts %} {% include 'scripts.html' %} {% endblock scripts %}-->
